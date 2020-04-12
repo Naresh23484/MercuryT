@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [Parallel_Testing]" parallel="classes">
+  <test name="Sample">
+    <classes>
+      <class name="Test.MercuryTest"/>
+      <class name="Test.MercuryTest2"/>
+    </classes>
+  </test> <!-- Sample -->
+  <test name="Sample(failed)" parallel="classes">
+    <classes>
+      <class name="Test.MercuryTest">
+        <methods>
+          <include name="getResult"/>
+          <include name="tearDown"/>
+          <include name="endSuite"/>
+          <include name="mercury_tours"/>
+          <include name="startSuite"/>
+        </methods>
+      </class> <!-- Test.MercuryTest -->
+      <class name="Test.MercuryTest2">
+        <methods>
+          <include name="startSuite"/>
+          <include name="tearDown"/>
+          <include name="endSuite"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- Test.MercuryTest2 -->
+    </classes>
+  </test> <!-- Sample(failed) -->
+</suite> <!-- Failed suite [Parallel_Testing] -->

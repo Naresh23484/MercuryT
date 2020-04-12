@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Everjobs Suite]">
+  <test name="Page Object Model Project">
+    <classes>
+      <class name="test.EPortalAutomation.LoginTest"/>
+    </classes>
+  </test> <!-- Page Object Model Project -->
+  <test name="Page Object Model Project(failed)">
+    <classes>
+      <class name="test.EPortalAutomation.LoginTest">
+        <methods>
+          <include name="endSuite"/>
+          <include name="startSuite"/>
+          <include name="goToEmpLogin"/>
+          <include name="logintoEportal"/>
+        </methods>
+      </class> <!-- test.EPortalAutomation.LoginTest -->
+    </classes>
+  </test> <!-- Page Object Model Project(failed) -->
+</suite> <!-- Failed suite [Everjobs Suite] -->
